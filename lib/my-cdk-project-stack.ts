@@ -17,7 +17,7 @@ export class MyCdkProjectStack extends cdk.Stack {
     });
 
     const myTable = new dynamodb.Table(this, 'Table9015927', {
-      tableName: 'Table9015927',
+      tableName: 'Table9015927'+ Date.now(),
       partitionKey: { name: 'id', type: dynamodb.AttributeType.STRING },
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
       removalPolicy: cdk.RemovalPolicy.DESTROY,
